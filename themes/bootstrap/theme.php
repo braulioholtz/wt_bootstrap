@@ -105,3 +105,9 @@ $WT_STATS_MAP_Y=220;
 $WT_STATS_CHART_COLOR1="ffffff";
 $WT_STATS_CHART_COLOR2="9ca3d4";
 $WT_STATS_CHART_COLOR3="e5e6ef";
+
+define('WT_JQUERY_BOOTSTRAP',      WT_STATIC_URL.'themes/bootstrap/assets/js/bootstrap.min.js');
+define('WT_JQUERY_BOOTSTRAP_DROPDOWN',WT_STATIC_URL.'themes/bootstrap/assets/js/bootstrap-dropdown.js');
+define('WT_JQUERY_BOOTSTRAP_BUTTON',WT_STATIC_URL.'themes/bootstrap/assets/js/bootstrap-button.js');
+define('WT_JQUERY_BOOTSTRAP_ALERT',WT_STATIC_URL.'themes/bootstrap/assets/js/bootstrap-alert.js');
+define('WT_JQUERY_BOOTSTRAP_MODAL',WT_STATIC_URL.'themes/bootstrap/assets/js/bootstrap-modal.js');
