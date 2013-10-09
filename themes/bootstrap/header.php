@@ -31,10 +31,6 @@ $this
 	->addExternalJavascript(WT_JQUERY_COLORBOX_URL)
 	->addExternalJavascript(WT_JQUERY_WHEELZOOM_URL)
 	->addExternalJavascript(WT_JQUERY_BOOTSTRAP)
-	->addExternalJavascript(WT_JQUERY_BOOTSTRAP_DROPDOWN)
-	->addExternalJavascript(WT_JQUERY_BOOTSTRAP_BUTTON)
-	->addExternalJavascript(WT_JQUERY_BOOTSTRAP_ALERT)
-	->addExternalJavascript(WT_JQUERY_BOOTSTRAP_MODAL)
 	->addInlineJavascript('activate_colorbox();')
 	->addInlineJavascript('jQuery.extend(jQuery.colorbox.settings, { width:"70%", height:"70%", transition:"none", slideshowStart:"'. WT_I18N::translate('Play').'", slideshowStop:"'. WT_I18N::translate('Stop').'", title: function() { var img_title = jQuery(this).data("title"); return img_title; } } );');
 
@@ -46,9 +42,10 @@ $this
 	<title><?php echo WT_Filter::escapeHtml($title); ?></title> 
 	<?php echo header_links($META_DESCRIPTION, $META_ROBOTS, $META_GENERATOR, $LINK_CANONICAL); ?> 
 	<link rel="icon" href="<?php echo WT_CSS_URL; ?>favicon.png" type="image/png"> 
-	<link href="<?php echo WT_THEME_URL; ?>assets/css/bootstrap.css" rel="stylesheet">
+	<link href="<?php echo WT_THEME_URL; ?>dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?php echo WT_THEME_URL; ?>dist/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo WT_THEME_URL; ?>jquery-ui-1.10.3/jquery-ui-1.10.3.custom.css">
-	<link href="<?php echo WT_THEME_URL; ?>assets/css/bootstrap-responsive.css" rel="stylesheet">
+	
 	<link rel="stylesheet" type="text/css" href="<?php echo WT_THEME_URL; ?>style.css">
 	<!--[if IE]> 
 	<link rel="stylesheet" type="text/css" href="<?php echo WT_CSS_URL; ?>msie.css"> 
@@ -62,54 +59,54 @@ $this
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
     		<div class="container-fluid">
-	        	<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	        	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 		            <span class="icon-bar"></span>
-	    	        <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
-	          	</button>
-	          	<div class="lfloat">
-	          		<h1 style="width:150px;"><a href="index.php">WEBTREES</a></h1>
-	          	</div>
-	          	
-	          	<div class="div_search lfloat">
-			        <form action="search.php" method="post">
-			            <input type="hidden" name="action" value="general" />
-			            <input type="hidden" name="topsearch" value="yes" />
-			            <input type="search" name="query" id="searc-basic" placeholder="<?php echo WT_I18N::translate('Search'); ?>" dir="auto" />
-			            <input type="image" name="search" src="<?php echo WT_THEME_URL; ?>assets/ico/search.png" style="width:25px;margin-top:-10px;" />
-			        </form>
-			    </div>
+		            <span class="icon-bar"></span>
+		        </button>
+		        <div class="navbar-header">
+		          <h1><a href="index.php">Webtrees</a></h1>
+		        </div>
+		        
+	          	<div class="navbar-collapse collapse">
+		          	<div class="div_search lfloat">
+				        <form action="search.php" method="post">
+				            <input type="hidden" name="action" value="general" />
+				            <input type="hidden" name="topsearch" value="yes" />
+				            <input type="search" name="query" id="searc-basic" placeholder="<?php echo WT_I18N::translate('Search'); ?>" dir="auto" />
+				            <input type="image" name="search" src="<?php echo WT_THEME_URL; ?>/ico/search.png" style="width:25px;margin-top:-10px;" />
+				        </form>
+				    </div>
 			    
-	          	<div class="nav-collapse collapse">
-		            <div class="navbar-text pull-right" style="margin-right:20px;">
-		            	<div class="btn-group" style="margin-right:10px;">
-	                		<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?php echo WT_I18N::translate('Language'); ?><span class="caret"></span></button>
-	          				<ul class="dropdown-menu">
-	                			<?php 
-	                			$menu=WT_MenuBar::getLanguageMenu();
-								if ($menu) {
-									echo $menu->getMenuLanguage();
-								}?>
-							</ul>
-						</div>
-				        <?php if (WT_USER_ID) { ?>
-							<div class="btn-group">
-								<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?php echo WT_I18N::translate('User'); ?><span class="caret"></span></button>
-				          		<ul class="dropdown-menu">
-									<li><a href="edituser.php"><?php echo WT_I18N::translate('My account'); ?></a></li>
-									<li><?php echo logout_link(); ?></li>
+			            <div class="navbar-right" style="margin-right:20px;">
+			            	<div class="btn-group">
+		                		<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?php echo WT_I18N::translate('Language'); ?><span class="caret"></span></button>
+		          				<ul class="dropdown-menu">
+		                			<?php 
+		                			$menu=WT_MenuBar::getLanguageMenu();
+									if ($menu) {
+										echo $menu->getMenuLanguage();
+									}?>
 								</ul>
 							</div>
-						<?php } else { ?>
-							<a href="login.php" class="btn btn-primary" style="color:white;">Login</a>
-						<?php } ?>	   
-		            </div>
-	        	</div><!--/.nav-collapse -->
-        	</div>
-    	</div>
+					        <?php if (WT_USER_ID) { ?>
+								<div class="btn-group">
+									<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?php echo WT_I18N::translate('User'); ?><span class="caret"></span></button>
+					          		<ul class="dropdown-menu">
+										<li><a href="edituser.php"><?php echo WT_I18N::translate('My account'); ?></a></li>
+										<li><?php echo logout_link(); ?></li>
+									</ul>
+								</div>
+							<?php } else { ?>
+								<a href="login.php" class="btn btn-primary" style="color:white;">Login</a>
+							<?php } ?>	   
+			            </div>
+        		</div><!--/.nav-collapse -->
+    		</div>
+		</div>
 	</div>
 	<div class="navbar">
-		<div class="navbar-texto">
+		<div class="navbar-text">
 			<div class="container">
 				<div id="topMenu">
 					<ul id="main-menu">
