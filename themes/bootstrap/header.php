@@ -42,11 +42,12 @@ $this
 	<title><?php echo WT_Filter::escapeHtml($title); ?></title> 
 	<?php echo header_links($META_DESCRIPTION, $META_ROBOTS, $META_GENERATOR, $LINK_CANONICAL); ?> 
 	<link rel="icon" href="<?php echo WT_CSS_URL; ?>favicon.png" type="image/png"> 
+	<link rel="stylesheet" type="text/css" href="<?php echo WT_THEME_URL; ?>style.css">
 	<link href="<?php echo WT_THEME_URL; ?>dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo WT_THEME_URL; ?>dist/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo WT_THEME_URL; ?>jquery-ui-1.10.3/jquery-ui-1.10.3.custom.css">
 	
-	<link rel="stylesheet" type="text/css" href="<?php echo WT_THEME_URL; ?>style.css">
+	
 	<!--[if IE]> 
 	<link rel="stylesheet" type="text/css" href="<?php echo WT_CSS_URL; ?>msie.css"> 
 	<![endif]--> 
@@ -74,11 +75,11 @@ $this
 				            <input type="hidden" name="action" value="general" />
 				            <input type="hidden" name="topsearch" value="yes" />
 				            <input type="search" name="query" id="searc-basic" placeholder="<?php echo WT_I18N::translate('Search'); ?>" dir="auto" />
-				            <input type="image" name="search" src="<?php echo WT_THEME_URL; ?>/ico/search.png" style="width:25px;margin-top:-10px;" />
+				            <input type="image" name="search" src="<?php echo WT_THEME_URL; ?>/ico/search.png" style="width:25px;" />
 				        </form>
 				    </div>
 			    
-			            <div class="navbar-right" style="margin-right:20px;">
+			            <div class="navbar-right">
 			            	<div class="btn-group">
 		                		<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?php echo WT_I18N::translate('Language'); ?><span class="caret"></span></button>
 		          				<ul class="dropdown-menu">
