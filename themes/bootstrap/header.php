@@ -66,7 +66,7 @@ $this
 		            <span class="icon-bar"></span>
 		        </button>
 		        <div class="navbar-header">
-		          <h1><a href="index.php">Webtrees</a></h1>
+		          <h1><a href="index.php" class="navbar-brand"><?php echo WT_TREE_TITLE; ?></a></h1>
 		        </div>
 		        
 	          	<div class="navbar-collapse collapse">

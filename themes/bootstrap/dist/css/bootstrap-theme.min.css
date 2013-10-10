@@ -73,7 +73,8 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
 .navbar .navbar-text li a { font-weight: bold; border-left: 1px solid rgba(255,255,255,.75); border-right: 1px solid rgba(0,0,0,.1);}
 .navbar .navbar-text li:first-child a { border-left: 0; border-radius: 3px 0 0 3px;}
 .navbar .navbar-text li:last-child a { border-right: 0; border-radius: 0 3px 3px 0;}
-
+.navbar-brand { padding: 2px 0px 0 15px; font-size: 22px; }
+.navbar-brand a { color: #003664; }
 .container { max-width: 100%; }
 .blockheader [class^=icon-], [class*=" icon-"] {background-position: 0px; }
 .label { color: #000; }
