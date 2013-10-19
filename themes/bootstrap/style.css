@@ -22,12 +22,9 @@
 * You should have received a copy of the GNU General Public License
 * along with this program; if not, write to the Free Software
 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
-*
-* $Id: style.css 15332 2013-07-24 20:53:19Z rob $
 */
 
 /* Add a permanent scrollbar, to prevent "flickering" when hover effects lengthen page */
-
 html {overflow-y:scroll;}
 body {color:#555555;background-color:#ffffff;font:12px tahoma, arial, helvetica, sans-serif;margin:1px;padding-left:5px;}
 fieldset {margin:8px 8px 4px 8px;text-align:left;}
@@ -258,6 +255,7 @@ html[dir=rtl] .header_search {float:left;}
 .width100 {width:100%;}
 
 /* Font sizes */
+.font11 {font-size:11px;}
 .font9 {font-size:9px;}
 
 /* Message box */
@@ -352,10 +350,25 @@ td.descriptionbox a {color:#ffffff;}/* this keeps the tag color the same when it
 .person_box_template .noprint {width:25px;height:50px; position:relative;}
 .person_box_template .chart_textbox {height:auto;overflow: hidden;}
 .person_box_template .details div {display:block;}
-.person_box_template img {float:left;margin:0 4px 0 0;height:50px;width:auto;max-width:80px;}
-html[dir=rtl] .person_box_template img {float:right;margin:0 0 0 4px;}
-.person_box_template i[class^="icon-silhouette"] {float:left;}
-html[dir=rtl] .person_box_template i[class^="icon-silhouette"] {float:right;}
+.person_box_template img,
+.person_box_template a.gallery {
+	float:     left;
+	height:    50px;
+	margin:    0 4px 0 0;
+	max-width: 80px;
+	width:     auto;
+}
+html[dir=rtl] .person_box_template img,
+html[dir=rtl] .person_box_template a.gallery {
+	float:  right;
+	margin: 0 0 0 4px;
+}
+.person_box_template i[class^="icon-silhouette"] {
+	float:left;
+}
+html[dir=rtl] .person_box_template i[class^="icon-silhouette"] {
+	float:right;
+}
 
 #branches-page table, #medialist-page .list_table, #medialist-page .list_table_controls {margin:0 auto;}
 #medialist-page .list_table, #medialist-page .list_table_controls {width:100%;}
@@ -594,6 +607,7 @@ html[dir=rtl] #main-menu li li a {float:right;padding:1px 5px 1px 10px;}
 #menu-fam-addfav            {background-position:left  -870px;} html[dir=rtl] #menu-fam-addfav            {background-position:right  -870px;}
 #menu-fam-change            {background-position:left   -90px;} html[dir=rtl] #menu-fam-change            {background-position:right   -90px;}
 #menu-fam-del               {background-position:left  -840px;} html[dir=rtl] #menu-fam-del               {background-position:right  -840px;}
+#menu-fam-editraw           {background-position:left   -90px;} html[dir=rtl] #menu-fam-editraw           {background-position:right   -90px;} /* needs new icon */
 #menu-fam-orderchil         {background-position:left -1080px;} html[dir=rtl] #menu-fam-orderchil         {background-position:right -1080px;}
 #menu-help-contents         {background-position:left  -300px;} html[dir=rtl] #menu-help-contents         {background-position:right  -300px;}
 #menu-help-faq              {background-position:left  -300px;} html[dir=rtl] #menu-help-faq              {background-position:right  -300px;}
@@ -605,6 +619,7 @@ html[dir=rtl] #main-menu li li a {float:right;padding:1px 5px 1px 10px;}
 #menu-indi-addfav           {background-position:left  -870px;} html[dir=rtl] #menu-indi-addfav           {background-position:right  -870px;}
 #menu-indi-addname          {background-position:left  -780px;} html[dir=rtl] #menu-indi-addname          {background-position:right  -780px;}
 #menu-indi-del              {background-position:left  -840px;} html[dir=rtl] #menu-indi-del              {background-position:right  -840px;}
+#menu-indi-editraw          {background-position:left  -750px;} html[dir=rtl] #menu-indi-editraw          {background-position:right  -750px;}
 #menu-indi-editsex          {background-position:left  -810px;} html[dir=rtl] #menu-indi-editsex          {background-position:right  -810px;}
 #menu-list-fam              {background-position:left   -90px;} html[dir=rtl] #menu-list-fam              {background-position:right   -90px;}
 #menu-list-indi             {background-position:left  -120px;} html[dir=rtl] #menu-list-indi             {background-position:right  -120px;}
@@ -620,9 +635,11 @@ html[dir=rtl] #main-menu li li a {float:right;padding:1px 5px 1px 10px;}
 #menu-note-addfav           {background-position:left  -870px;} html[dir=rtl] #menu-note-addfav           {background-position:right  -870px;}
 #menu-note-del              {background-position:left  -840px;} html[dir=rtl] #menu-note-del              {background-position:right  -840px;}
 #menu-note-edit             {background-position:left -1020px;} html[dir=rtl] #menu-note-edit             {background-position:right -1020px;}
+#menu-note-editraw          {background-position:left -1020px;} html[dir=rtl] #menu-note-editraw          {background-position:right -1020px;}
 #menu-obje-addfav           {background-position:left  -870px;} html[dir=rtl] #menu-obje-addfav           {background-position:right  -870px;}
 #menu-obje-del              {background-position:left  -840px;} html[dir=rtl] #menu-obje-del              {background-position:right  -840px;}
 #menu-obje-edit             {background-position:left -1110px;} html[dir=rtl] #menu-obje-edit             {background-position:right -1110px;}
+#menu-obje-editraw          {background-position:left -1110px;} html[dir=rtl] #menu-obje-editraw          {background-position:right -1110px;}
 #menu-obje-link             {background-position:left -1140px;} html[dir=rtl] #menu-obje-link             {background-position:right -1140px;}
 #menu-obje-link-fam         {background-position:left   -90px;} html[dir=rtl] #menu-obje-link-fam         {background-position:right   -90px;}
 #menu-obje-link-indi        {background-position:left  -300px;} html[dir=rtl] #menu-obje-link-indi        {background-position:right  -300px;}
@@ -630,6 +647,7 @@ html[dir=rtl] #main-menu li li a {float:right;padding:1px 5px 1px 10px;}
 #menu-repo-addfav           {background-position:left  -870px;} html[dir=rtl] #menu-repo-addfav           {background-position:right  -870px;}
 #menu-repo-del              {background-position:left  -840px;} html[dir=rtl] #menu-repo-del              {background-position:right  -840px;}
 #menu-repo-edit             {background-position:left  -990px;} html[dir=rtl] #menu-repo-edit             {background-position:right  -990px;}
+#menu-repo-editraw          {background-position:left  -990px;} html[dir=rtl] #menu-repo-editraw          {background-position:right  -990px;}
 #menu-report li             {background-position:left  -570px;} html[dir=rtl] #menu-report li             {background-position:right  -570px;}
 #menu-search-advanced       {background-position:left  -600px;} html[dir=rtl] #menu-search-advanced       {background-position:right  -600px;}
 #menu-search-general        {background-position:left  -600px;} html[dir=rtl] #menu-search-general        {background-position:right  -600px;}
@@ -638,6 +656,7 @@ html[dir=rtl] #main-menu li li a {float:right;padding:1px 5px 1px 10px;}
 #menu-sour-addfav           {background-position:left  -870px;} html[dir=rtl] #menu-sour-addfav           {background-position:right  -870px;}
 #menu-sour-del              {background-position:left  -840px;} html[dir=rtl] #menu-sour-del              {background-position:right  -840px;}
 #menu-sour-edit             {background-position:left  -960px;} html[dir=rtl] #menu-sour-edit             {background-position:right  -960px;}
+#menu-sour-editraw          {background-position:left  -960px;} html[dir=rtl] #menu-sour-editraw          {background-position:right  -960px;}
 #menu-story-sub             {background-position:left -1208px;} html[dir=rtl] #menu-story-sub             {background-position:right -1208px;}
 #menu-tree li               {background-position:left  -240px;} html[dir=rtl] #menu-tree li               {background-position:right  -240px;}
 
@@ -758,8 +777,10 @@ html[dir=rtl] dd .editlink, html[dir=rtl] dd .deletelink {float:left;}
 /* =========== Indi tabs ================== */
 /* Facts & Events tab */
 #personal_facts_content .fact_NOTE, #personal_facts_content .fact_SOUR, #family-table .fact_NOTE, #family-table .fact_SOUR {margin:5px 3px 5px 0;clear:both;}
-#media-display-image {float:left;}
-#media-display-title {float:left;font-style:italic;margin:10px;}
+.media-display-image {float:left;}
+.media-display-title {float:left;font-style:italic;margin:10px;}
+html[dir=rtl] .media-display-image {float:right;}
+html[dir=rtl] .media-display-title {float:right;}
 
 /* ========= jquery-ui.custom.css changes ============ */
 .ui-tabs, .ui-tabs .ui-tabs-nav li a {padding:0;}
@@ -913,9 +934,6 @@ html[dir=rtl] #search-page-table .value {margin:0 170px 0 0;}
 #edituser-table select {margin:0;}
 html[dir=rtl] #edituser-table .label {float:right;}
 html[dir=rtl] #edituser-table .value {margin:0 260px 0 0;}
-
-
-
 
 @media print {
 	#backprint {display:none;}
@@ -1099,7 +1117,10 @@ a.icon-udarrow:hover {width:20px;height:20px;background-image:url(images/udarrow
 #save-cancel .cancel {float:right;margin:5px;}
 html[dir=rtl] #save-cancel .save {float:right;}
 html[dir=rtl] #save-cancel .cancel {float:left;}
-#edit_interface-page {margin-bottom:50px;}
+#edit_interface-page,
+#addmedia-page {
+	margin-bottom: 50px;
+}
 
 /* Addmedia pop-ups*/
 #addmedia-page input[type="text"] {line-height:18px;margin:0 5px;width:300px;}
