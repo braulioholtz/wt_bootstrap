@@ -42,9 +42,10 @@ $this
 	<title><?php echo WT_Filter::escapeHtml($title); ?></title> 
 	<?php echo header_links($META_DESCRIPTION, $META_ROBOTS, $META_GENERATOR, $LINK_CANONICAL); ?> 
 	<link rel="icon" href="<?php echo WT_CSS_URL; ?>favicon.png" type="image/png"> 
-	<link rel="stylesheet" type="text/css" href="<?php echo WT_THEME_URL; ?>style.css">
+	
 	<link href="<?php echo WT_THEME_URL; ?>dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo WT_THEME_URL; ?>dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="<?php echo WT_THEME_URL; ?>style.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo WT_THEME_URL; ?>jquery-ui-1.10.3/jquery-ui-1.10.3.custom.css">
 	
 	
@@ -75,7 +76,7 @@ $this
 				            <input type="hidden" name="action" value="general" />
 				            <input type="hidden" name="topsearch" value="yes" />
 				            <input type="search" name="query" id="searc-basic" placeholder="<?php echo WT_I18N::translate('Search'); ?>" dir="auto" />
-				            <input type="image" name="search" src="<?php echo WT_THEME_URL; ?>/ico/search.png" style="width:25px;" />
+				            <button type="submit" class="btn btn-primary" style="margin-top:-7px;"><span class="glyphicon glyphicon-search"></span></button>
 				        </form>
 				    </div>
 			    
@@ -85,9 +86,10 @@ $this
 		          				<ul class="dropdown-menu">
 		                			<?php 
 		                			$menu=WT_MenuBar::getLanguageMenu();
-									if ($menu) {
-										echo $menu->getMenuLanguage();
-									}?>
+		                			if ($menu) {
+		                				echo $menu->getMenuLanguage();
+		                			}
+		                			?>
 								</ul>
 							</div>
 					        <?php if (WT_USER_ID) { ?>
