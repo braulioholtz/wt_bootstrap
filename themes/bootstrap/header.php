@@ -81,11 +81,26 @@ include "extras/extra.php";
 				    </div>
 			    
 			            <div class="navbar-right">
+			            	<?php
+			            	if (WT_GED_ID && !$SEARCH_SPIDER && WT_Site::preference('ALLOW_USER_THEMES') && get_gedcom_setting(WT_GED_ID, 'ALLOW_THEME_DROPDOWN')) {
+			            	?>
+				            	<div class="btn-group">
+			                		<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?php echo WT_I18N::translate('Theme'); ?><span class="caret"></span></button>
+			          				<ul class="dropdown-menu">
+			                			<?php 
+			                			$language=Extra::getOptionsMenu("themes");
+			                			echo $language;
+			                			?>
+									</ul>
+								</div>
+							<?php 
+							}
+							?>
 			            	<div class="btn-group">
 		                		<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?php echo WT_I18N::translate('Language'); ?><span class="caret"></span></button>
 		          				<ul class="dropdown-menu">
 		                			<?php 
-		                			$language=Extra::getNewLanguageMenu();
+		                			$language=Extra::getOptionsMenu("languages");
 		                			echo $language;
 		                			?>
 								</ul>
