@@ -30,7 +30,7 @@ if (!defined('WT_WEBTREES')) {
 	exit;
 }
 
-$theme_name = "webtrees"; // need double quotes, as file is scanned/parsed by script
+$theme_name = "bootstrap"; // need double quotes, as file is scanned/parsed by script
 $headerfile = WT_THEME_DIR.'header.php';
 $footerfile = WT_THEME_DIR.'footer.php';
 
