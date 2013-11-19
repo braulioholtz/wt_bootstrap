@@ -33,7 +33,7 @@ $this
 	->addExternalJavascript(WT_JQUERY_BOOTSTRAP)
 	->addInlineJavascript('activate_colorbox();')
 	->addInlineJavascript('jQuery.extend(jQuery.colorbox.settings, { width:"70%", height:"70%", transition:"none", slideshowStart:"'. WT_I18N::translate('Play').'", slideshowStop:"'. WT_I18N::translate('Stop').'", title: function() { var img_title = jQuery(this).data("title"); return img_title; } } );');
-
+include "extras/extra.php";
 ?>
 <!DOCTYPE html>
 <html <?php echo WT_I18N::html_markup(); ?>>
@@ -85,10 +85,8 @@ $this
 		                		<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?php echo WT_I18N::translate('Language'); ?><span class="caret"></span></button>
 		          				<ul class="dropdown-menu">
 		                			<?php 
-		                			$menu=WT_MenuBar::getLanguageMenu();
-		                			if ($menu) {
-		                				echo $menu->getMenuLanguage();
-		                			}
+		                			$language=Extra::getNewLanguageMenu();
+		                			echo $language;
 		                			?>
 								</ul>
 							</div>
