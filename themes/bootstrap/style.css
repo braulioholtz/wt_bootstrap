@@ -101,28 +101,6 @@ html[dir=rtl] #main-menu li li a {float:right;padding:1px 5px 1px 10px;}
 .navbar .navbar-texto li a { font-weight: bold; border-left: 1px solid rgba(255,255,255,.75); border-right: 1px solid rgba(0,0,0,.1);}
 .navbar .navbar-texto li:first-child a { border-left: 0; border-radius: 3px 0 0 3px;}
 .navbar .navbar-texto li:last-child a { border-right: 0; border-radius: 0 3px 3px 0;}
-@media (max-width: 767px) {
-	#footer {margin-left: -20px;margin-right: -20px; padding-left: 20px; padding-right: 20px; }
-	#main-menu > li {background-image: none;background-repeat: no-repeat;width: 110px;text-align: left;float: none;}
-	.navbar .navbar-texto li {display: block; }
-	.navbar-text.pull-right {float: none; padding-left: 5px; padding-right: 5px; }
-	#index_main_blocks {clear: none;width: 100%;float: block;}
-	#index_small_blocks{float:block; width:100%;}
-#sidebar {display:none;}
-	#separator {display:none;}
-	.use-sidebar #indi_left {width:90%;}
-}
-@media (max-width: 980px) {
-	/* Enable use of floated navbar text */
-	.navbar-text.pull-right {
-		float: none;
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-	#main-menu > li {margin-bottom: 20px;}
-	
-}
-.blockheader [class^=icon-], [class*=" icon-"] {background-position: 0px; }
 
 /* Main menu icons */
 #menu-calendar{background-position:center -60px}
@@ -1843,3 +1821,27 @@ html[dir=rtl] #cboxSlideshow {right:57px;left:0; }
 #main-menu a:hover {background; none; color: DarkSlateGray;}
 
 dl {margin-bottom: 3px;}
+
+@media (max-width: 767px) {
+	#footer {margin-left: -20px;margin-right: -20px; padding-left: 20px; padding-right: 20px; }
+	#main-menu > li {background-image: none;background-repeat: no-repeat;width: 110px;text-align: left;float: none;}
+	.navbar .navbar-texto li {display: block; }
+	.navbar-text.pull-right {float: none; padding-left: 5px; padding-right: 5px; }
+	#index_main_blocks {clear: none;width: 100%;float: block;}
+	#index_small_blocks{float:block; width:100%;}
+	#sidebar {display:none;}
+	#separator {display:none;}
+	.use-sidebar #indi_left {width:90%;}
+}
+@media (max-width: 980px) {
+	/* Enable use of floated navbar text */
+	.navbar-text.pull-right {
+		float: none;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	#main-menu > li {margin-bottom: 20px;}
+	
+}
+.blockheader [class^=icon-], [class*=" icon-"] {background-position: 0px; }
+
