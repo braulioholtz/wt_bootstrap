@@ -22,19 +22,22 @@
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //
 // PNG Icons By:Alessandro Rei; License: GPL; http://www.kde-look.org/content/show.php/Dark-Glass+reviewed?content=67902
-//
-// $Id: theme.php 14693 2013-01-22 08:56:56Z greg $
 
 if (!defined('WT_WEBTREES')) {
 	header('HTTP/1.0 403 Forbidden');
 	exit;
 }
 
+// Theme name - this needs double quotes, as file is scanned/parsed by script
 $theme_name = "bootstrap"; // need double quotes, as file is scanned/parsed by script
+
+// A version number in the path prevents browser-cache problems during upgrade
+define('WT_CSS_URL', WT_THEME_URL . 'css-1.5.0/');
+
 $headerfile = WT_THEME_DIR.'header.php';
 $footerfile = WT_THEME_DIR.'footer.php';
 
-//- main icons
+// Legacy icons.
 $WT_IMAGES=array(
 	// used to draw charts
 	'dline'          =>WT_THEME_URL.'images/dline.png',
