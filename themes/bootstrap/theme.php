@@ -29,10 +29,10 @@ if (!defined('WT_WEBTREES')) {
 }
 
 // Theme name - this needs double quotes, as file is scanned/parsed by script
-$theme_name = "bootstrap"; // need double quotes, as file is scanned/parsed by script
+$theme_name = "Bootstrap"; // need double quotes, as file is scanned/parsed by script
 
 // A version number in the path prevents browser-cache problems during upgrade
-define('WT_CSS_URL', WT_THEME_URL . 'css-1.5.0/');
+define('WT_CSS_URL', WT_THEME_URL . 'css-1.5.4/');
 
 $headerfile = WT_THEME_DIR.'header.php';
 $footerfile = WT_THEME_DIR.'footer.php';
@@ -71,39 +71,40 @@ $fanChart = array(
 );
 
 //-- pedigree chart variables
-$bwidth=250;			// width of boxes on pedigree chart
-$bheight=90;			// height of boxes on pedigree chart
-$baseyoffset=10;		// position the entire pedigree tree relative to the top of the page
-$basexoffset=10;		// position the entire pedigree tree relative to the left of the page
-$bxspacing=1;			// horizontal spacing between boxes on the pedigree chart
-$byspacing=5;			// vertical spacing between boxes on the pedigree chart
-$linewidth=1.5;			// width of joining lines
-$shadowcolor="";		// shadow color for joining lines
-$shadowblur=0;			// shadow blur for joining lines
-$shadowoffsetX=0;		// shadowOffsetX for joining lines
-$shadowoffsetY=0;		// shadowOffsetY for joining lines
+$bwidth         = 260;  // width of boxes on pedigree chart
+$bheight        = 80;	// height of boxes on pedigree chart
+$baseyoffset    = 10;	// position the entire pedigree tree relative to the top of the page
+$basexoffset    = 10;	// position the entire pedigree tree relative to the left of the page
+$bxspacing      = 0;	// horizontal spacing between boxes on the pedigree chart
+$byspacing      = 5;	// vertical spacing between boxes on the pedigree chart
+$brborder       = 1;    // box right border thickness
+$linewidth      = 1.5;	// width of joining lines
+$shadowcolor    = '';	// shadow color for joining lines
+$shadowblur     = 0;	// shadow blur for joining lines
+$shadowoffsetX  = 0;	// shadowOffsetX for joining lines
+$shadowoffsetY  = 0;	// shadowOffsetY for joining lines
 
 // descendancy - relationship chart variables
-$Dbaseyoffset=20;		// position the entire descendancy tree relative to the top of the page
-$Dbasexoffset=20;		// position the entire descendancy tree relative to the left of the page
-$Dbxspacing=5;			// horizontal spacing between boxes
-$Dbyspacing=10;			// vertical spacing between boxes
-$Dbwidth=260;			// width of DIV layer boxes
-$Dbheight=80;			// height of DIV layer boxes
-$Dindent=15;			// width to indent descendancy boxes
-$Darrowwidth=30;		// additional width to include for the up arrows
+$Dbaseyoffset   = 20;	// position the entire descendancy tree relative to the top of the page
+$Dbasexoffset   = 20;	// position the entire descendancy tree relative to the left of the page
+$Dbxspacing     = 5;	// horizontal spacing between boxes
+$Dbyspacing     = 10;	// vertical spacing between boxes
+$Dbwidth        = 290;	// width of DIV layer boxes
+$Dbheight       = 80;	// height of DIV layer boxes
+$Dindent        = 15;	// width to indent descendancy boxes
+$Darrowwidth    = 30;	// additional width to include for the up arrows
 
 // -- Dimensions for compact version of chart displays
-$cbwidth=240;
-$cbheight=50;
+$cbwidth  = 240;
+$cbheight = 50;
 
 // --  The largest possible area for charts is 300,000 pixels. As the maximum height or width is 1000 pixels
-$WT_STATS_S_CHART_X=440;
-$WT_STATS_S_CHART_Y=125;
-$WT_STATS_L_CHART_X=900;
+$WT_STATS_S_CHART_X = 440;
+$WT_STATS_S_CHART_Y = 220;
+$WT_STATS_L_CHART_X = 900;
 // --  For map charts, the maximum size is 440 pixels wide by 220 pixels high
-$WT_STATS_MAP_X=440;
-$WT_STATS_MAP_Y=220;
+$WT_STATS_MAP_X = 440;
+$WT_STATS_MAP_Y = 220;
 
 $WT_STATS_CHART_COLOR1="ffffff";
 $WT_STATS_CHART_COLOR2="9ca3d4";

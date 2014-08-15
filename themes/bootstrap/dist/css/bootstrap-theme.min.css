@@ -68,7 +68,7 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
 #footer {background-color: #f5f5f5; }
 /* Lastly, apply responsive CSS fixes as necessary */
 .sidebar-nav { padding: 9px 0; }
-.navbar .navbar-text { margin-top: 40px;width: 100%;border-bottom:1px solid rgba(0,0,0,.1);}
+.navbar .navbar-text { margin-top: 50px;width: 100%;border-bottom:1px solid rgba(0,0,0,.1);}
 .navbar .navbar-text li { display: table-cell; width: 1%; float: none;}
 .navbar .navbar-text li a { font-weight: bold; border-left: 1px solid rgba(255,255,255,.75); border-right: 1px solid rgba(0,0,0,.1);}
 .navbar .navbar-text li:first-child a { border-left: 0; border-radius: 3px 0 0 3px;}
@@ -114,3 +114,4 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
 	.use-sidebar #indi_left { width: 100%; }
 	#header_accordion1 { float: none; }
 }
+    .navbar-brand { height: auto; }
