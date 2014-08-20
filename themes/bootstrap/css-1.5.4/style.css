@@ -1995,12 +1995,12 @@ dd .deletelink {
 }
 
 /* ========= jQuery.datatable styling over-rides ============ */
-.odd {
-	background-color: LightGrey;
+.dataTable td {
+    padding: 8px;
 }
 
-.even {
-	background-color: #fff;
+.odd {
+	background: #DBEAF4;
 }
 
 .css_right {
