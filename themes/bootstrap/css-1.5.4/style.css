@@ -2724,7 +2724,7 @@ fieldset {
 }
 
 #search-page-table {
-	background-color: #ccc;
+	background-color: #ABC5DB;
 	border: 1px solid #aaa;
 	border-radius: 4px;
 	margin: 20px auto 0;
@@ -2740,7 +2740,7 @@ fieldset {
 }
 
 #search-page-table .value {
-	background-color: #ddd;
+	background-color: #edf7fd;
 	border: 1px solid #fff;
 	margin: 0 0 0 170px;
 	padding: 5px;
