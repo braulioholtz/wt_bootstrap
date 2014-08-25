@@ -2,6 +2,7 @@ wt_bootstrap
 ============
 New Theme for Webtrees 1.5 - [webtrees.net][1]
 
+[![Analytics](https://ga-beacon.appspot.com/UA-54080279-2/wt_bootstrap/README.md)](https://github.com/igrigorik/ga-beacon)
 
 ----------
 
