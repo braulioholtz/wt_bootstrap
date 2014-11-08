@@ -1,11 +1,8 @@
-﻿<?php
+<?php
 // Header for bootstrap theme
 //
 // webtrees: Web based Family History software
-// Copyright (C) 2013 webtrees development team.
-//
-// Derived from PhpGedView
-// Copyright (C) 2002 to 2009 PGV Development Team.  All rights reserved.
+// Copyright (C) 2014 webtrees development team.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -21,6 +18,8 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+use WT\Auth;
+
 if (!defined('WT_WEBTREES')) {
 	header('HTTP/1.0 403 Forbidden');
 	exit;
@@ -33,6 +32,8 @@ $this
 	->addExternalJavascript(WT_JQUERY_BOOTSTRAP)
 	->addInlineJavascript('activate_colorbox();')
 	->addInlineJavascript('jQuery.extend(jQuery.colorbox.settings, { width:"70%", height:"70%", transition:"none", slideshowStart:"'. WT_I18N::translate('Play').'", slideshowStop:"'. WT_I18N::translate('Stop').'", title: function() { var img_title = jQuery(this).data("title"); return img_title; } } );');
+
+global $WT_IMAGES;
 include "extras/extra.php";
 ?>
 <!DOCTYPE html>
@@ -52,9 +53,6 @@ include "extras/extra.php";
 	<!--[if IE]> 
 	<link rel="stylesheet" type="text/css" href="<?php echo WT_CSS_URL; ?>msie.css"> 
 	<![endif]--> 
-	<?php if (WT_USE_LIGHTBOX) { ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo WT_STATIC_URL, WT_MODULES_DIR; ?>lightbox/css/album_page.css">
-	<?php } ?>
 </head>
 <body id="body">
 	<?php if ($view!='simple') { ?>
@@ -82,15 +80,12 @@ include "extras/extra.php";
 			    
 			            <div class="navbar-right">
 			            	<?php
-			            	if (WT_GED_ID && !$SEARCH_SPIDER && WT_Site::preference('ALLOW_USER_THEMES') && get_gedcom_setting(WT_GED_ID, 'ALLOW_THEME_DROPDOWN')) {
+			            	if (WT_GED_ID && !$SEARCH_SPIDER && $WT_TREE->getPreference('ALLOW_THEME_DROPDOWN') ) {
 			            	?>
 				            	<div class="btn-group">
 			                		<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?php echo WT_I18N::translate('Theme'); ?><span class="caret"></span></button>
 			          				<ul class="dropdown-menu">
-			                			<?php 
-			                			$language=Extra::getOptionsMenu("themes");
-			                			echo $language;
-			                			?>
+			                			<?php echo Extra::getOptionsMenu("themes"); ?>
 									</ul>
 								</div>
 							<?php 
@@ -99,13 +94,10 @@ include "extras/extra.php";
 			            	<div class="btn-group">
 		                		<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?php echo WT_I18N::translate('Language'); ?><span class="caret"></span></button>
 		          				<ul class="dropdown-menu">
-		                			<?php 
-		                			$language=Extra::getOptionsMenu("languages");
-		                			echo $language;
-		                			?>
+		                			<?php echo Extra::getOptionsMenu("languages"); ?>
 								</ul>
 							</div>
-					        <?php if (WT_USER_ID) { ?>
+					        <?php if (Auth::check()) { ?>
 								<div class="btn-group">
 									<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><?php echo WT_I18N::translate('User'); ?><span class="caret"></span></button>
 					          		<ul class="dropdown-menu">

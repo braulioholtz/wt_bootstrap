@@ -2,10 +2,8 @@
 // Bootstrap theme
 //
 // webtrees: Web based Family History software
-// Copyright (C) 2012 webtrees development team.
+// Copyright (C) 2014 webtrees development team.
 //
-// Derived from PhpGedView
-// Copyright (C) 2002 to 2009  PGV Development Team.  All rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -29,10 +27,10 @@ if (!defined('WT_WEBTREES')) {
 }
 
 // Theme name - this needs double quotes, as file is scanned/parsed by script
-$theme_name = "Bootstrap"; // need double quotes, as file is scanned/parsed by script
+$theme_name = "Bootstrap";
 
 // A version number in the path prevents browser-cache problems during upgrade
-define('WT_CSS_URL', WT_THEME_URL . 'css-1.5.4/');
+define('WT_CSS_URL', WT_THEME_URL . 'css-1.6.0/');
 
 $headerfile = WT_THEME_DIR.'header.php';
 $footerfile = WT_THEME_DIR.'footer.php';
@@ -63,7 +61,7 @@ $WT_IMAGES=array(
 //-- variables for the fan chart
 $fanChart = array(
 	'font'    =>WT_ROOT.'includes/fonts/DejaVuSans.ttf',
-	'size'    =>'7px',
+	'size'    =>7,
 	'color'   =>'#000000',
 	'bgColor' =>'#eeeeee',
 	'bgMColor'=>'#b1cff0',
