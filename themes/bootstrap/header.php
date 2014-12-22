@@ -55,7 +55,7 @@ include "extras/extra.php";
 </head>
 <body id="body">
 	<?php if ($view!='simple') { ?>
-	<div class="navbar navbar-fixed-top">
+	<header class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
     		<div class="container-fluid">
 	        	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -69,7 +69,7 @@ include "extras/extra.php";
 		        
 	          	<div class="navbar-collapse collapse">
 		          	<div class="div_search lfloat">
-				        <form action="search.php" method="post">
+				        <form action="search.php" method="post" role="search">
 				            <input type="hidden" name="action" value="general" />
 				            <input type="hidden" name="topsearch" value="yes" />
 				            <input type="search" name="query" id="searc-basic" placeholder="<?php echo WT_I18N::translate('Search'); ?>" dir="auto" />
@@ -111,12 +111,12 @@ include "extras/extra.php";
         		</div><!--/.nav-collapse -->
     		</div>
 		</div>
-	</div>
+	</header>
 	<div class="navbar">
 		<div class="navbar-text">
 			<div class="container">
-				<div id="topMenu">
-					<ul id="main-menu">
+				<nav id="topMenu">
+					<ul id="main-menu" role="menubar">
 						<?php 
 						echo WT_MenuBar::getGedcomMenu();
 						echo WT_MenuBar::getMyPageMenu();
@@ -127,11 +127,10 @@ include "extras/extra.php";
 						echo WT_MenuBar::getSearchMenu();
 						echo implode('', WT_MenuBar::getModuleMenus()); ?>
 					</ul>
-				</div>
+				</nav>
 	    	</div>
 	    </div>
 	</div><!-- /.navbar -->
 	<?php }
-	echo $javascript;
 	echo WT_FlashMessages::getHtmlMessages(); ?>
-	<div id="content">
+	<main id="content">
